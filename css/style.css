@@ -1,0 +1,481 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  .ir-Arriba{
+    position: fixed;
+    bottom: 10px;
+    right: 1%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border:2px solid rgb(20, 10, 165);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.5s;
+}
+.ir-Arriba:hover{
+    background: rgb(20, 10, 165);
+    color:#fff;
+    border: 2px solid #fff;
+}
+.ir-Arriba:hover span{color:#fff;}
+
+.ir-Arriba > span{
+   font-size: 25px;
+   color: #000;
+}
+    /**Cortes**/
+.corte-abajo{
+    position:absolute;
+    bottom:0;
+    left:0;
+    border-width: 0 0 10vh 100vw;
+    border-style: solid;
+    border-color:transparent transparent #fff transparent;
+}
+.corte-arriba{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 10vh 100vw 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    z-index: 10;
+}
+/**Menu de Navegacion**/
+.header{
+   position:relative;
+    width:100%;
+}
+.menu{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.menu .nav{
+    margin-right: 20px; 
+    display: flex;
+}
+ .menu .nav .nav-item{
+     list-style: none;}
+ .menu .nav .nav-item .nav-link{
+     text-decoration: none;
+     margin: 0px 25px;
+     padding:5px;
+     color: #000;
+     border-radius: 24px;
+     transition: 0.3s;
+     font-size: 20px;
+ }
+ .menu .nav .nav-item .nav-link.active{
+     border:2px solid rgb(20, 10, 165);
+ }
+ .menu .nav .nav-item .nav-link:hover{
+     background: rgb(20, 10, 165);
+     color:#fff;
+ }
+ .btn-menu > .fa-bars{
+    display: none;
+}
+.menu .contenido-izq a button{
+    width: 170px;
+    height: 40px;
+    background: rgb(20, 10, 165);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    margin:15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menu .contenido-izq a button:hover{
+    background:rgb(0, 47, 255);
+    font-size: 25px;
+}
+/** Imagen Header**/
+.img-header{
+    position:relative;
+    width:100%;
+    height: 100vh;
+    background:url(../img/image.1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
+.img-header .welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-header .welcome h1 {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 200;
+}
+.img-header .welcome hr {
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+.img-header .welcome p {
+    font-size: 23px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.img-header .welcome button{
+    width: 170px;
+    height: 40px;
+    background: rgb(20, 10, 165);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.img-header .welcome button:hover{
+    background:rgb(0, 47, 255);
+    font-size: 25px;
+}
+
+/** Acerca de Mi**/
+.acerca-de {
+    width: 100%;
+    margin-top: 120px;
+}
+.acerca-de .info-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.acerca-de .info-container h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.acerca-de .info-container p {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    line-height: 35px;
+    margin: 10px 0px;
+}
+.acerca-de .info-container .mas-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.acerca-de .info-container .mas-info button {
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    background: rgb(20, 10, 165);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.acerca-de .info-container .mas-info button:hover{
+    background:rgb(0, 47, 255);
+    font-size: 25px;
+}
+/** Mis Proyectos **/
+.misProyectos{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    background: url(../img/image.5.jpeg);
+    background-attachment:fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 50px;
+}
+.misProyectos .deg-background{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.8);
+}
+.misProyectos .ejeZproyecto{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.misProyectos .container-proyecto{
+    width: 90%;
+    margin:auto;
+    padding-top: 100px;
+}
+.misProyectos .container-proyecto .titulo-proyecto{
+    border:2px solid #fff;
+    padding:10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.misProyectos .container-proyecto .titulo-proyecto h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+}
+.misProyectos .container-proyecto .titulo-proyecto hr{
+    background:#fff;
+    width: 50%;
+    height: 3px;
+    margin: 10px auto;
+ }
+ .misProyectos .container-proyecto .imagenes-proyecto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+
+.ejeZproyecto .github a{
+    color:white;
+    font-size:35px;
+    text-decoration:none;
+    margin:5px;
+    padding:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+.ejeZproyecto .github i{
+    color:white;
+    font-size:35px;
+    margin:4px;
+}
+.ejeZproyecto .github a:hover{
+    color:rgb(236, 72, 72);
+    cursor: pointer;
+}
+
+.ejeZproyecto .github i:hover{
+    color:rgb(236, 72, 72);
+    cursor: pointer;
+}
+
+.misProyectos .container-proyecto .imagenes-proyecto  img {
+    width: 400px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto{
+    width: 100%;
+    margin-top: 70px;
+}
+.contacto .titulo-contacto{
+    font-size: 50px;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contacto hr {
+    background:#000;
+    width: 30%;
+    height: 3px;
+    margin: 10px auto;
+}
+.contacto .info-contacto{
+    display:flex;
+    justify-content: space-around;
+    font-size: 50px;
+    margin:15px 0 0 40px;
+}
+
+.contacto .info-contacto i {
+    color:#000;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding:25px;
+}
+.contacto .info-contacto i:hover {
+    color:#fff;
+    background-color:rgb(20, 10, 165);
+    border:rgb(20, 10, 165);
+}
+
+/** Testimonios **/
+.tecnologias{
+    position:relative;
+    width:100%;
+    height: 100vh;
+    background:url(../img/image4.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    
+}
+.tecnologias .tecno-titulo{
+    width: 50%;
+    margin:auto;
+    text-align: center;
+}
+.tecnologias .tecno-titulo h2{
+    font-size: 50px;
+    font-weight: normal;
+    color: #fff;
+    margin: 10px;
+}
+.tecnologias .tecno-titulo hr{
+    width: 60%;
+    height: 2px;
+    margin:auto;
+    background:#000;
+}
+.tecnologias .box-tecno{
+    width: 90%;
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tecnologias .box-tecno .card-tecno{
+    border:1px solid #fff;
+    background:#fff;
+    border-radius: 30px;
+    width: 15%;
+    margin: 10px;
+    padding:15px;
+}
+.tecnologias .box-tecno .card-tecno .card-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.tecnologias .box-tecno .card-tecno .card-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    object-fit: cover;
+    
+}
+.tecnologias .box-tecno .card-tecno .tecno-text{
+    padding:10px;
+    border-radius: 20px;
+    transition: 0.1s;
+}
+.tecnologias .box-tecno .card-tecno .tecno-text h4{
+    font-size: 30px;
+    font-weight: 400;
+    color:#000;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: 0.1s;
+}
+
+
+.footer{
+    background: rgba(0,0,0,0.8);
+    margin-top: 30px;
+}
+
+.footer .copyright p{
+    text-align:center;
+    margin:0;
+    color:#fff;
+    font-size:17px;
+    padding:20px;
+}
+
+@media only screen and (max-width:900px){
+    .btn-menu > .fa-bars{
+        display: block;
+        position:absolute;
+        right: 55px;
+        top: 20px;
+        font-size: 28px;
+        color: #000;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .btn-menu > .fa-times{color: rgb(20, 10, 165);}
+    .btn-menu > .fa-bars:hover{color:rgb(20, 10, 165);}
+    .menu .contenido-izq{margin-left: 30px;}
+    .menu .nav{
+        position: fixed;
+        top:60px;
+        left:-100%;
+        background:#fff;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top:1px solid rgb(20, 10, 165);
+    }
+    .menu .nav .nav-item{
+        width: 100%;
+        border-bottom: 1px solid #000;
+        display: flex;
+        justify-content: center;
+    }
+    .menu .nav .nav-item .nav-link {
+        font-size: 20px;
+        text-align: center;
+        padding:12px 0px;
+    }
+    .menu .nav .nav-item .nav-link.active{
+        background: none;
+        color:rgb(20, 10, 165);
+    }
+    .menu .nav ul li a:hover{
+        background: none;
+        color:rgb(20, 10, 165);
+    }
+
+}
